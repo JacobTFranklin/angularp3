@@ -1,0 +1,16 @@
+<div *ngIf="!auth.isAuthenticated()" id="logInPage">
+  <div id="loginBox">
+      <div id="revel_logo"><img src="assets/RevelLogo_Indigo.png" id="revel_image"></div>
+      <p>Fitness Challenge</p>
+        <button
+          class="btn btn-primary btn-margin btn-margin"
+          *ngIf="!auth.isAuthenticated()"
+          (click)="auth.login()">
+            Log In
+        </button>
+    </div>
+</div>
+<div *ngIf="auth.isAuthenticated()">
+  <app-navbar></app-navbar>
+  <router-outlet></router-outlet>
+</div>

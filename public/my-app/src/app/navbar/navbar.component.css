@@ -1,0 +1,45 @@
+.header {
+    background-color: #26225D !important;
+    height: 60px;
+    color:white;
+}
+
+#revel_image {
+    height: 50px;
+    width: 137px;
+}
+
+#revel_logo {
+    position: relative;
+    left: 20px;
+}
+
+.row {
+    height:3px;
+    background-color: #4fc4d6;
+}
+
+#links {
+    position: relative;
+    left: 20px;
+    color: white;
+}
+
+a {
+    color: inherit; /* blue colors for links too */
+    text-decoration: inherit; /* no underline */
+    padding: 10px;
+  }
+
+#user_logo {
+  float: right;
+  position: relative;
+  top: 5px;
+  right: 10px;
+}
+
+#user_image {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}

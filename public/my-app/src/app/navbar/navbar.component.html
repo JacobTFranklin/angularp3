@@ -1,0 +1,26 @@
+<header class="header">
+  <span id="revel_logo"><img src="assets/RevelLogo_White.png" id="revel_image"></span>
+    <span id="links">
+      <a routerLink="/dashboard">Dashboard</a>
+      <a routerLink="/tracker">Tracker</a>
+      <a routerLink="/team">Team</a>
+    </span>
+
+  <span id="user_logo">
+      <div class="col">
+          <span id="userName">{{user.firstName}} {{user.lastName}}</span>
+          <div ngbDropdown class="d-inline-block">
+            <button class="btn btn-outline-none" id="dropdownBasic1" ngbDropdownToggle>
+                <img src="{{user.image}}" id="user_image">
+            </button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <button class="dropdown-item" routerLink="/profile">Profile</button>
+              <button class="dropdown-item" *ngIf="auth.isAuthenticated()"
+              (click)="auth.logout()">Log Out</button>
+            </div>
+          </div>
+        </div>
+  </span>
+</header>
+<div class="row">
+</div>

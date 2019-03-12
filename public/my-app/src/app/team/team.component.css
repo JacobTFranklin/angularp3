@@ -1,0 +1,44 @@
+.header {
+    color:#26225D;
+    background-color: white;
+}
+
+h2 {
+    position: relative;
+    left: 50px;
+    padding: 10px;
+}
+
+#team {
+    background-color: white;
+    margin: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 20px;
+}
+
+#teamStats {
+    position: relative;
+    left: 30px;
+}
+
+
+
+h5 {
+    float: right;
+    color: #4fc4d6;
+}
+
+p {
+    color: grey;
+}
+
+.teamPic {
+    margin: 10px;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.historyLink {
+    margin-left: 30px;
+}

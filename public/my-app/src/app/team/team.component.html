@@ -1,0 +1,32 @@
+<header class="header">
+    <h2>Team</h2>
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="container" id="team">
+        <h5>{{user.team}}</h5>
+        <br>
+        <div class="row">
+          <div class="col md 6" id="teamStats">
+            <h3>{{teamWeekly[0].minutes}}</h3>
+            <p>Minutes tracked this week</p>
+            <h3>{{teamSum[0].minutes}}</h3>
+            <p>Minutes tracked total</p>
+            <h3>{{teamRank[0].team_rank | ordinal}}</h3>
+            <p>Out of 6 teams</p>
+          </div>
+          <div class="col md 6" id="teamList">
+            <span *ngFor="let user of users">
+            <img src="{{user.image}}" class="teamPic">
+            <span>{{user.firstName}} {{user.lastName}}</span>
+            <span class="historyLink"><a routerLink="history/{{user.uid}}">View history</a></span>
+            <br>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

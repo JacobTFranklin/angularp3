@@ -1,0 +1,26 @@
+<header class="header">
+  <h2>Dashboard</h2>
+</header>
+<div class="container">
+  <div class="row">
+    <div class="col md 6" id="yourStats">
+        <h4>Your Stats</h4>
+        <h3>{{weeklyMinutes[0].minutes}}</h3>
+        <p>Minutes tracked this week</p>
+        <h3>{{totalMinutes}}</h3>
+        <p>Minutes tracked total</p>
+        <h3>{{rank[0].my_rank | ordinal}}</h3>
+        <p>Out of 5 team members</p>
+    </div>
+
+    <div class="col md 6" id="teamStats">
+      <h4>Team Stats</h4>
+      <h3>{{teamWeekly[0].minutes}}</h3>
+      <p>Minutes tracked this week</p>
+      <h3>{{teamSum[0].minutes}}</h3>
+      <p>Minutes tracked total</p>
+      <h3>{{teamRank[0].team_rank | ordinal}}</h3>
+      <p>Out of 6 teams</p>
+    </div>
+  </div>
+</div>

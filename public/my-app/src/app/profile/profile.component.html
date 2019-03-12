@@ -1,0 +1,15 @@
+<header class="header">
+    <h2>Profile</h2>
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="container" id="profile">
+        <p>Display name: {{user.firstName}} {{user.lastName}}</p>
+        <p>Team: {{user.team}}</p>
+        <a routerLink="history/{{user.uid}}" id="historyLink">View history</a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+#logInPage {
+    background-color:#39376c;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+}
+
+#loginBox {
+  background-color: white;
+  margin:auto;
+  width: 300px;
+  height: 200px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.87), 0 6px 20px 0 rgba(0, 0, 0, 0.87);
+  text-align:center;
+}
+
+#revel_image {
+  height: 70px;
+  width: 192.750px;
+}
+
+#revel_logo {
+  margin: 10px;
+}

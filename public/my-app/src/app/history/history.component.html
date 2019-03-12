@@ -1,0 +1,29 @@
+<header class="header">
+    <h2>History</h2>
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="container" id="history">
+        <span id="historyName"><h5>{{user.firstName}} {{user.lastName}}</h5></span>
+        <table class="table" id="historyTable">
+            <thead>
+                <tr>
+                  <th scope="col">Date</th>
+                  <th scope="col">Minutes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let stat of stats">
+                 <td>{{stat.date}}</td>
+                  <td>{{stat.minutes}}</td>
+                  <button *ngIf="email === stat.email.toLowerCase()" class="btn btn-primary" title="delete stat"
+                    (click)="deleteStat(stat)">Delete</button>
+                </tr>
+              </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
