@@ -1,9 +1,10 @@
 {
   "name": "my-app",
   "version": "0.0.0",
+  "main": "server.js",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -11,7 +12,8 @@
     "heroku-postbuild": "ng build --prod"
   },
   "engines": {
-    "node": "10.3.0"
+    "node": "10.3.0",
+    "npm": "6.4.1"
   },
   "private": true,
   "dependencies": {
@@ -28,9 +30,11 @@
     "angular-in-memory-web-api": "^0.8.0",
     "auth0-js": "^9.10.0",
     "core-js": "^2.5.4",
+    "express": "4.16.4",
     "jwt-decode": "^2.2.0",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",
+    "typescript": "3.2.4",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
