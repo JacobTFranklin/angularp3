@@ -29,6 +29,7 @@
     "@types/auth0-js": "^8.11.11",
     "angular-in-memory-web-api": "^0.8.0",
     "auth0-js": "^9.10.0",
+    "cors": "2.8.5",
     "core-js": "^2.5.4",
     "express": "4.16.4",
     "jwt-decode": "^2.2.0",
