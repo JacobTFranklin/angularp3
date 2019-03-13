@@ -21,12 +21,12 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Static directory
-app.use(express.static(__dirname + 'dist/my-app'));
+app.use(express.static(__dirname + '/dist/my-app'));
 
 const path = require('path');
 
 app.get('/*', function(req,res) {
-res.sendFile(path.join(__dirname + 'dist/my-app/index.html'));
+res.sendFile(path.join(__dirname + '/dist/my-app/index.html'));
 });
 
 //Require models
