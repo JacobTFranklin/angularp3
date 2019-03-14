@@ -127,8 +127,9 @@ export class StatsService {
 
   getUser (): Observable<User> {
     var locHeads = new HttpHeaders({
-      'Content-Type': 'text',
-      'Authorization' : 'bearer ' + this.idToken
+      'Content-Type': 'application/json',
+      'Authorization' : 'bearer ' + this.idToken,
+      'responseType': 'text'
       });
     return this.http.get<User>(this.usersUrl, { headers: locHeads});
   }
