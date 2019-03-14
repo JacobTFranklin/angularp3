@@ -29,6 +29,12 @@ var db = require('./models/');
 //Require routes
 require('./routes/routes.js')(app);
 
+const path = require('path');
+
+app.get('/*', function(req,res) {
+  res.sendFile(path.join(__dirname + '/dist/my-app/index.html'));
+});
+  
 // Starts the server to begin listening
 // =============================================================
 db.sequelize.sync({}).then(function () {
@@ -36,4 +42,3 @@ db.sequelize.sync({}).then(function () {
     console.log("App listening on PORT " + PORT);
   });
 });
-
