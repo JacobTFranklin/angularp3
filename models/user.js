@@ -19,13 +19,13 @@ module.exports = function (sequelize, DataTypes) {
                 len: [1, 50]
             }
         },
-        email: {
-            type: DataTypes.STRING,
-            validate: {
-                allowNull: false,
-                len: [1 - 50]
-            }
-        },
+        // email: {
+        //     type: DataTypes.STRING,
+        //     validate: {
+        //         allowNull: false,
+        //         len: [1 - 50]
+        //     }
+        // },
         team: {
             type: DataTypes.STRING,
             validate: {
