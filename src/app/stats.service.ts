@@ -129,7 +129,6 @@ export class StatsService {
     var locHeads = new HttpHeaders({
       'Content-Type': 'applicaton/json',
       'Authorization' : 'bearer ' + this.idToken,
-       responseType: 'text'
       });
     return this.http.get<User>(this.usersUrl, { headers: locHeads});
   }
