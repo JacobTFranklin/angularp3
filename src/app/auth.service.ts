@@ -13,7 +13,7 @@ export class AuthService {
     clientID: '5dl6gctmL1nEnaPjPwOOIOYK51lwEgmu',
     domain: 'dev-yz09wjvb.auth0.com',
     responseType: 'token id_token',
-    redirectUri: 'http://localhost:4200/dashboard',
+    redirectUri: 'https://afternoon-dawn-57178.herokuapp.com/dashboard',
     scope: 'openid email'
   });
 
