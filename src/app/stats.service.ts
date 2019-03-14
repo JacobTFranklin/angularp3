@@ -27,27 +27,27 @@ export class StatsService {
 
   
 
-  private statsUrl = 'http://localhost:8080/api/stats';
+  private statsUrl = '/api/stats';
 
-  private statsWeeklyUrl = 'http://localhost:8080/api/stats/weekly';
+  private statsWeeklyUrl = '/api/stats/weekly';
 
-  private statsTotalUrl = 'http://localhost:8080/api/stats/sum';
+  private statsTotalUrl = '/api/stats/sum';
 
-  private otherStatsUrl = 'http://localhost:8080/api/stats/other';
+  private otherStatsUrl = '/api/stats/other';
 
-  private teamSumUrl = 'http://localhost:8080/api/stats/team/sum';
+  private teamSumUrl = '/api/stats/team/sum';
 
-  private teamWeeklyUrl = 'http://localhost:8080/api/stats/team/weekly';
+  private teamWeeklyUrl = '/api/stats/team/weekly';
 
-  private rankUrl = 'http://localhost:8080/api/rank';
+  private rankUrl = '/api/rank';
 
-  private rankTeamUrl = 'http://localhost:8080/api/rank/team';
+  private rankTeamUrl = '/api/rank/team';
 
-  private usersUrl = 'http://localhost:8080/api/users';
+  private usersUrl = '/api/users';
 
-  private usersTeamUrl = 'http://localhost:8080/api/users/team';
+  private usersTeamUrl = '/api/users/team';
 
-  private otherUserUrl = 'http://localhost:8080/api/users/other';
+  private otherUserUrl = '/api/users/other';
 
 
 
