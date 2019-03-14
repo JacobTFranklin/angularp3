@@ -8,7 +8,7 @@ import { HistoryComponent } from './history/history.component';
 import { CallbackComponent } from './callback/callback.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full'},
+  { path: '/', redirectTo: '/dashboard', pathMatch: 'full'},
   { path: 'dashboard', component: DashboardComponent },
   { path: 'tracker', component: TrackerComponent },
   { path: 'team', component: TeamComponent },
