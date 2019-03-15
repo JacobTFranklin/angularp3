@@ -41,5 +41,6 @@ module.exports = function (sequelize, DataTypes) {
         User.hasMany(models.Stat, {
             onDelete: "cascade"
         });
+    }
     return User;
-    };
+};
