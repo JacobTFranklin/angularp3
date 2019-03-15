@@ -1,9 +1,9 @@
 module.exports = function (sequelize, DataTypes) {
     var User = sequelize.define("User", {
-        uid: {
-            type: DataTypes.INTEGER,
-            autoIncrement: true,
-        },
+        // uid: {
+        //     type: DataTypes.INTEGER,
+        //     autoIncrement: true,
+        // },
         firstName: {
             type: DataTypes.STRING,
             validate: {
