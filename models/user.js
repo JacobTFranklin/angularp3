@@ -19,13 +19,13 @@ module.exports = function (sequelize, DataTypes) {
                 len: [1, 50]
             }
         },
-        email: {
-            type: DataTypes.STRING,
-            validate: {
-                allowNull: false,
-                len: [1 - 50]
-            }
-        },
+        // email: {
+        //     type: DataTypes.STRING,
+        //     validate: {
+        //         allowNull: false,
+        //         len: [1 - 50]
+        //     }
+        // },
         team: {
             type: DataTypes.STRING,
             validate: {
@@ -37,9 +37,9 @@ module.exports = function (sequelize, DataTypes) {
         }
     });
 
-    // User.associate = function (models) {
-    //     User.hasMany(models.Stat, {
-    //         onDelete: "cascade"
-    //     });
+    User.associate = function (models) {
+        User.hasMany(models.Stat, {
+            onDelete: "cascade"
+        });
     return User;
     };
