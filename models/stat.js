@@ -24,7 +24,10 @@ module.exports = function (sequelize, DataTypes) {
   });
 
   Stat.associate = function (models) {
-    Stat.belongsTo(models.User, {})
+    Stat.belongsTo(models.User, {
+      foreignKey: 'email',
+      targetKey: 'email'
+    })
   };
 
   return Stat;

@@ -37,11 +37,9 @@ module.exports = function (sequelize, DataTypes) {
         }
     });
 
-    User.associate = function (models) {
-        User.hasMany(models.Stat, {
-            onDelete: "cascade"
-        });
-    };
-
+    // User.associate = function (models) {
+    //     User.hasMany(models.Stat, {
+    //         onDelete: "cascade"
+    //     });
     return User;
-};
+    };
