@@ -10,7 +10,7 @@ module.exports = function (app) {
             cache: true,
             rateLimit: true,
             jwksRequestsPerMinute: 5,
-            jwksUri: `https://dev-yz09wjvb.auth0.com/.well-known/jwks.json`
+            jwksUri: `https://afternoon-dawn-57178.herokuapp.com/dashboard/.well-known/jwks.json`
         }),
         // // Validate the audience and the issuer.
         // audience: process.env.AUTH0_AUDIENCE,
@@ -21,7 +21,7 @@ module.exports = function (app) {
     app.get("/api/stats/other", checkJwt, function (req, res) {
         db.Stat.findAll({
             where: {
-                id: req.query.uid
+                uid: req.query.uid
             }
         }).then(function (dbStats) {
             res.json(dbStats);
@@ -31,7 +31,7 @@ module.exports = function (app) {
     app.get("/api/stats", checkJwt, function (req, res) {
         db.Stat.findAll({
             where: {
-                email: req.query.email
+                UserEmail: req.query.email
             }
         }).then(function (dbStats) {
             res.json(dbStats);
@@ -41,7 +41,7 @@ module.exports = function (app) {
     app.get("/api/stats/sum", checkJwt, function (req, res) {
         db.Stat.sum('minutes', {
             where: {
-                email: req.user.email
+                UserEmail: req.user.email
             }
         })
             .then(function (dbStats) {
