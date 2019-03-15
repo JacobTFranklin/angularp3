@@ -50,7 +50,7 @@ module.exports = function (app) {
     });
 
     app.get("/api/stats/team/sum", checkJwt, function (req, res) {
-        db.Stat.sequelize.query("SELECT SUM(minutes) as minutes FROM Stats join users on Users.email = Stats.UserEmail WHERE Users.team ='" + req.query.user + "'").spread((results, metadata) => {
+        db.Stat.sequelize.query("SELECT SUM(minutes) as minutes FROM Stats join Users on Users.email = Stats.UserEmail WHERE Users.team ='" + req.query.user + "'").spread((results, metadata) => {
             res.json(metadata);
         });
     });
