@@ -50,32 +50,32 @@ module.exports = function (app) {
     });
 
     app.get("/api/stats/team/sum", checkJwt, function (req, res) {
-        db.Stat.sequelize.query("SELECT SUM(minutes) as minutes FROM Stats join Users on Users.email = Stats.email WHERE Users.team ='" + req.query.user + "'").spread((results, metadata) => {
+        db.Stat.sequelize.query("SELECT SUM(minutes) as minutes FROM Stats join users on Users.email = Stats.UserEmail WHERE Users.team ='" + req.query.user + "'").spread((results, metadata) => {
             res.json(metadata);
         });
     });
 
 
     app.get("/api/stats/weekly", checkJwt, function (req, res) {
-        db.Stat.sequelize.query("SELECT SUM(minutes) as minutes FROM Stats WHERE email='" + req.user.email + "' and date >= CAST(DATE_ADD(CURDATE(), INTERVAL (1 - DAYOFWEEK(CURDATE())) DAY) AS date)").spread((results, metadata) => {
+        db.Stat.sequelize.query("SELECT SUM(minutes) as minutes FROM Stats WHERE UserEmail='" + req.user.email + "' and date >= CAST(DATE_ADD(CURDATE(), INTERVAL (1 - DAYOFWEEK(CURDATE())) DAY) AS date)").spread((results, metadata) => {
             res.json(metadata);
         });
     });
 
     app.get("/api/stats/team/weekly", checkJwt, function (req, res) {
-        db.Stat.sequelize.query("SELECT SUM(minutes) as minutes FROM Stats join Users on Users.email = Stats.email WHERE Users.team = '" + req.query.user + "' and date >= CAST(DATE_ADD(CURDATE(), INTERVAL (1 - DAYOFWEEK(CURDATE())) DAY) AS date)").spread((results, metadata) => {
+        db.Stat.sequelize.query("SELECT SUM(minutes) as minutes FROM stats join Users on Users.email = Stats.UserEmail WHERE users.team = '" + req.query.user + "' and date >= CAST(DATE_ADD(CURDATE(), INTERVAL (1 - DAYOFWEEK(CURDATE())) DAY) AS date)").spread((results, metadata) => {
             res.json(metadata);
         });
     });
 
     app.get("/api/rank", checkJwt, function (req, res) {
-        db.Stat.sequelize.query("SELECT RANK() OVER (ORDER BY sum(minutes)) my_rank FROM Stats WHERE email = '" + req.user.email + "' GROUP BY email").spread((results, metadata) => {
+        db.Stat.sequelize.query("SELECT RANK() OVER (ORDER BY sum(minutes)) my_rank FROM Stats WHERE UserEmail = '" + req.user.email + "' GROUP BY UserEmail").spread((results, metadata) => {
             res.json(metadata);
         });
     });
 
     app.get("/api/rank/team", checkJwt, function (req, res) {
-        db.Stat.sequelize.query("SELECT RANK() OVER (ORDER BY sum(minutes)) team_rank FROM Stats join obt9xbdqx4wuo9hj.Users on Users.email = Stats.email WHERE team = '" + req.query.user + "' GROUP BY Users.team").spread((results, metadata) => {
+        db.Stat.sequelize.query("SELECT RANK() OVER (ORDER BY sum(minutes)) team_rank FROM Stats join obt9xbdqx4wuo9hj.Users on Users.email = Stats.UserEmail WHERE team = '" + req.query.user + "' GROUP BY users.team").spread((results, metadata) => {
             res.json(metadata);
         });
     });
