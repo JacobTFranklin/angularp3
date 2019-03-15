@@ -10,7 +10,7 @@ module.exports = function (app) {
             cache: true,
             rateLimit: true,
             jwksRequestsPerMinute: 5,
-            jwksUri: `https://afternoon-dawn-57178.herokuapp.com/dashboard/.well-known/jwks.json`
+            jwksUri: `afternoon-dawn-57178.herokuapp.com/.well-known/jwks.json`
         }),
         // // Validate the audience and the issuer.
         // audience: process.env.AUTH0_AUDIENCE,
