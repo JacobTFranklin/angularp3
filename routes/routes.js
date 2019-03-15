@@ -10,7 +10,7 @@ module.exports = function (app) {
             cache: true,
             rateLimit: true,
             jwksRequestsPerMinute: 5,
-            jwksUri: `dev-yz09wjvb.auth0.com/.well-known/jwks.json`
+            jwksUri: `https://dev-yz09wjvb.auth0.com/.well-known/jwks.json`
         }),
         // // Validate the audience and the issuer.
         // audience: process.env.AUTH0_AUDIENCE,
