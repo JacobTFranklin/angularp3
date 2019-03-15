@@ -1,27 +1,19 @@
-# MyApp
+# Revel Fitness Tracker
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.1.
+## About
 
-## Development server
+The Revel Fitness Tracker is an application that allows team members to track their daily fitness metrics while also viewing their team's statistics in real-time. Simply sign in with your Revel email address to view your stats, add new minutes, and compare team rankings.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Technology
 
-## Code scaffolding
+This project is an Angular single page application and was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.1.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The live application is hosted on Heroku. The MySQL database is supported online through the JAWSDB Heroku extension. The backend server is built through Node Express. 
 
-## Build
+A full list of the Node requirements used can be found in the projects package.json file.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+All styling comes from the Bootstrap CDN and Google fonts.
 
-## Running unit tests
+## Support
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+For support, please contact Jacob Franklin.
