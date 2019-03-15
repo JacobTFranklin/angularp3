@@ -19,7 +19,7 @@ module.exports = function (app) {
     });
 
     app.get("/api/stats/other", checkJwt, function (req, res) {
-        console.log("req="+req);
+        console.log("req="+req.query);
         db.Stat.findAll({
             where: {
                 uid: req.query.uid
@@ -40,7 +40,7 @@ module.exports = function (app) {
     });
 
     app.get("/api/stats/sum", checkJwt, function (req, res) {
-        console.log("req="+req);
+        console.log("req="+req.user);
         db.Stat.sum('minutes', {
             where: {
                 UserEmail: req.user.email
