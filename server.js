@@ -10,7 +10,7 @@ var PORT = process.env.PORT || 8080;
 //Cors middleware
 const cors = require('cors')
 const corsOptions = {
-  origin: 'afternoon-dawn-57178.herokuapp.com',
+  origin: 'https://afternoon-dawn-57178.herokuapp.com/',
   optionsSuccessStatus: 200
 }
 
