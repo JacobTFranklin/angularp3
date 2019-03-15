@@ -13,14 +13,7 @@ module.exports = function (sequelize, DataTypes) {
     minutes: {
       type: DataTypes.INTEGER,
       allowNull: false,
-    },
-    email: {
-      type: DataTypes.STRING,
-      validate: {
-          allowNull: false,
-          len: [1 - 50]
-      }
-  }
+    }
   });
 
   Stat.associate = function (models) {
